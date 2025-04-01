@@ -100,10 +100,10 @@ const ProjectsAnimation = () => {
                 textsRef.current[i] = el; 
               }
             }}          
-            className={`panel-text absolute inset-0 text-4xl font-extrabold text-center uppercase opacity-0 `}
+            className={`panel-text absolute inset-0 text-4xl font-extrabold text-center opacity-0 `}
           >
             <div className="space-y-2  h-full flex flex-col justify-center items-center w-full">
-              <h3 className="text-lg text-white/80 font-poppins font-bold">
+              <h3 className="text-lg text-white/80 font-poppins font-bold uppercase">
                 {item.title}
               </h3>
               <p className="text-sm text-white/40 font-poppins font-semibold">
