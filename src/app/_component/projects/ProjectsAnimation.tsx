@@ -7,8 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectsAnimation = () => {
-  const panelsRef = useRef([]);
-  const textsRef = useRef([]);
+  const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const textsRef = useRef<(HTMLDivElement | null)[]>([]);
+
 
   // Tableau des titres et descriptions associés aux panneaux
   const panelTexts = [
@@ -94,7 +95,11 @@ const ProjectsAnimation = () => {
         {panelTexts.map((item, i) => (
           <div
             key={i}
-            ref={(el) => (textsRef.current[i] = el)}
+            ref={(el) => {
+              if (el) {
+                textsRef.current[i] = el; 
+              }
+            }}          
             className={`panel-text absolute inset-0 text-4xl font-extrabold text-center uppercase opacity-0 `}
           >
             <div className="space-y-2  h-full flex flex-col justify-center items-center w-full">
@@ -118,7 +123,11 @@ const ProjectsAnimation = () => {
         ].map((picture, i) => (
           <div
             key={i}
-            ref={(el) => (panelsRef.current[i] = el)}
+            ref={(el) => {
+              if (el) {
+                panelsRef.current[i] = el; // Assignez l'élément au tableau de refs
+              }
+            }}
             className={`panel absolute inset-0 overflow-hidden`}
           >
             <img src={picture} alt="alt" />

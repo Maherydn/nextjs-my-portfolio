@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./_component/header/Header";
 import HeroSection from "./_component/hero/HeroSection";
 import TechStackSection from "./_component/techStack/TechStackSection";

@@ -20,7 +20,7 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: heroSecrionRef.current,
         start: "top 70%",
-        toggleActions: "play none none none", 
+        toggleActions: "play none none none",
       },
     });
 
@@ -73,14 +73,16 @@ const HeroSection = () => {
       <div ref={myPictureRef}>
         <Image
           className="lg:size-50 size-36 bg-gradient-to-l from-purple-400 to-orange-400/80 rounded-full flex items-center justify-center"
-          src="./images/Avatar.png"
+          src="/images/Avatar.png" 
           alt="Avatar"
+          width={200}
+          height={200} 
         />
       </div>
 
       {/* Titres */}
       <div className="lg:text-5xl text-2xl text-white font-bold space-y-2">
-        <h2 ref={headingRef}>I'm Mahery,</h2>
+        <h2 ref={headingRef}>I&apos;m Mahery,</h2>
         <h2
           ref={subHeadingRef}
           className="bg-gradient-to-l from-purple-400 to-orange-400/80 bg-clip-text text-transparent"
@@ -108,7 +110,10 @@ const HeroSection = () => {
         >
           Get In Touch
         </a>
-        <button className="text-white py-2 px-4 border border-white rounded-3xl duration-200 hover:bg-white hover:text-slate-900 font-semibold" onClick={downloadCV}>
+        <button
+          className="text-white py-2 px-4 border border-white rounded-3xl duration-200 hover:bg-white hover:text-slate-900 font-semibold"
+          onClick={downloadCV}
+        >
           Download CV
         </button>
       </div>
