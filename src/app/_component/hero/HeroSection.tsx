@@ -2,6 +2,7 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +71,7 @@ const HeroSection = () => {
     >
       {/* Image avec animation flip-left */}
       <div ref={myPictureRef}>
-        <img
+        <Image
           className="lg:size-50 size-36 bg-gradient-to-l from-purple-400 to-orange-400/80 rounded-full flex items-center justify-center"
           src="./images/Avatar.png"
           alt="Avatar"

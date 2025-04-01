@@ -62,7 +62,7 @@ const ProjectsAnimation = () => {
     gsap.to(textsRef.current[0], { opacity: 1, y: "15%", duration: 0.33 });
 
     textsRef.current.forEach((text, i) => {
-      let tl = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".section-projects",
           start: `top -${window.innerHeight * i}`,
