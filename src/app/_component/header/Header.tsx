@@ -21,8 +21,8 @@ const Header = () => {
 
     ScrollTrigger.create({
       start: "top top",  
-      end: "bottom bottom",
-      scrub: 1,       
+      end: "bottom+=100%",  
+      scrub: 1,      
       onUpdate: (self) => {
         if (self.direction === -1) {
           showAnim.play(); 
