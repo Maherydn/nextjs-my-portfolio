@@ -1,16 +1,17 @@
-'use client'
+"use client";
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { EmailIcon, GitHubIcon, InstaIcon, LinkedinIcon } from "./IconeContact";
+import ContactItem from "./ContactItem";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
-
   useEffect(() => {
     gsap.fromTo(
-      '.contact-title',
+      ".contact-title",
       { opacity: 0, y: 50 },
       {
         opacity: 1,
@@ -18,7 +19,7 @@ const ContactSection = () => {
         duration: 1,
         stagger: 0.2,
         scrollTrigger: {
-          trigger: '#contact',
+          trigger: "#contact",
           start: "top 80%",
           end: "top 20%",
           scrub: true,
@@ -27,20 +28,20 @@ const ContactSection = () => {
     );
 
     gsap.fromTo(
-        '.contact-section',
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: '#contact',
-            start: "top 50%",
-            end: "top 20%",
-            scrub: true,
-          },
-        }
-      );
+      ".contact-section",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 50%",
+          end: "top 20%",
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
@@ -59,41 +60,26 @@ const ContactSection = () => {
       </div>
 
       <div className="contact-section space-y-4 px-10 sm:w-96 w-full">
-        <div className="flex justify-between items-center h-16 px-6 bg-gray rounded-lg">
-          <div className="flex space-x-2 items-center">
-            <h4 className="text-white/60 text-lg font-medium">Linkedin</h4>
-          </div>
-          <div>
-            <a href="#">➜</a>
-          </div>
-        </div>
-
-        <div className="flex justify-between items-center h-16 px-6 bg-gray rounded-lg">
-          <div className="flex space-x-2 items-center">
-            <h4 className="text-white/60 text-lg font-medium">GitHub</h4>
-          </div>
-          <div>
-            <a href="#">➜</a>
-          </div>
-        </div>
-
-        <div className="flex justify-between items-center h-16 px-6 bg-gray rounded-lg">
-          <div className="flex space-x-2 items-center">
-            <h4 className="text-white/60 text-lg font-medium">GitHub</h4>
-          </div>
-          <div>
-            <a href="#">➜</a>
-          </div>
-        </div>
-
-        <div className="flex justify-between items-center h-16 px-6 bg-gray rounded-lg">
-          <div className="flex space-x-2 items-center">
-            <h4 className="text-white/60 text-lg font-medium">GitHub</h4>
-          </div>
-          <div>
-            <a href="#">➜</a>
-          </div>
-        </div>
+        <ContactItem
+          label="Linkedin"
+          href="https://www.linkedin.com/in/mahery-daniel-96b711307/"
+          icon={<LinkedinIcon />}
+        />
+        <ContactItem
+          label="GitHub"
+          href="https://github.com/Maherydn"
+          icon={<GitHubIcon />}
+        />
+        <ContactItem
+          label="Email"
+          href="https://mail.google.com/mail/u/0/#inbox"
+          icon={<EmailIcon />}
+        />
+        <ContactItem
+          label="Instagram"
+          href="https://www.instagram.com/maherydaniel/"
+          icon={<InstaIcon />}
+        />
       </div>
     </section>
   );

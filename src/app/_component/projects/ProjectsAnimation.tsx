@@ -14,14 +14,14 @@ const ProjectsAnimation = () => {
   // Tableau des titres et descriptions associés aux panneaux
   const panelTexts = [
     {
-      title: "Back-office Bijoux & Deco",
-      description:
-        "This back-office web application is built with React and Express to manage orders and inventories efficiently for jewelry. It uses MongoDB for data storage and provides a simple, intuitive interface.",
-    },
-    {
       title: "Back-office Gestion Inter",
       description:
         "The back office allows you to manage interns, offering simple and efficient management of their follow-ups, built with Symfony for the backend and React for the frontend. This setup provides a seamless and dynamic user experience, ensuring efficient data management and interaction  .",
+    },
+    {
+      title: "Back-office Bijoux & Deco",
+      description:
+      "This back-office web application is built with React and Express to manage orders and inventories efficiently for jewelry. It uses MongoDB for data storage and provides a simple, intuitive interface.",
     },
     {
       title: "Bijoux & Deco",
@@ -116,8 +116,8 @@ const ProjectsAnimation = () => {
 
       <div className="p-wrap relative overflow-hidden  sm:w-md w-full h-40 sm:h-60  ">
         {[
-          "./images/backoffice.jpg",
           "./images/app.png",
+          "./images/backoffice.jpg",
           "./images/landing.jpg",
           "./images/chat.png",
         ].map((picture, i) => (
