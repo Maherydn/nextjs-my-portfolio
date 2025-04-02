@@ -72,7 +72,7 @@ const ContactSection = () => {
         />
         <ContactItem
           label="Email"
-          href="https://mail.google.com/mail/u/0/#inbox"
+          href="mailto:maherydn@gmail.com"
           icon={<EmailIcon />}
         />
         <ContactItem
