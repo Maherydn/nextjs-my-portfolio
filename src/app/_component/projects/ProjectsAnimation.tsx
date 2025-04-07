@@ -10,7 +10,6 @@ const ProjectsAnimation = () => {
   const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
   const textsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-
   // Tableau des titres et descriptions associés aux panneaux
   const panelTexts = [
     {
@@ -21,7 +20,7 @@ const ProjectsAnimation = () => {
     {
       title: "Back-office Bijoux & Deco",
       description:
-      "This back-office web application is built with React and Express to manage orders and inventories efficiently for jewelry. It uses MongoDB for data storage and provides a simple, intuitive interface.",
+        "This back-office web application is built with React and Express to manage orders and inventories efficiently for jewelry. It uses MongoDB for data storage and provides a simple, intuitive interface.",
     },
     {
       title: "Bijoux & Deco",
@@ -32,6 +31,11 @@ const ProjectsAnimation = () => {
       title: "Chat",
       description:
         "An instant messaging app allows users to exchange messages in real time quickly and seamlessly, built using React for the frontend, Symfony for the backend, and WebSocket for real-time communication. This setup ensures a responsive and efficient user experience, allowing for instant message delivery and smooth interaction.",
+    },
+    {
+      title: "Budget Tracker",
+      description:
+        "A personal finance app that allows users to manage their income and expenses month by month. It allows users to visualize and categorize monthly spending trends. Built with Next.js for the frontend and Symfony for the backend, the app ensures a dynamic and secure user experience with financial information organized for each month.",
     },
   ];
 
@@ -50,7 +54,7 @@ const ProjectsAnimation = () => {
           start: `top -${window.innerHeight * (i + 0.5)}`,
           end: `+=${window.innerHeight}`,
           scrub: true,
-          snap: panelsRef.current.length / 4,
+          snap: panelsRef.current.length / 5,
         },
       });
     });
@@ -97,9 +101,9 @@ const ProjectsAnimation = () => {
             key={i}
             ref={(el) => {
               if (el) {
-                textsRef.current[i] = el; 
+                textsRef.current[i] = el;
               }
-            }}          
+            }}
             className={`panel-text absolute inset-0 text-4xl font-extrabold text-center opacity-0 `}
           >
             <div className="space-y-2  h-full flex flex-col justify-center items-center w-full">
@@ -120,6 +124,7 @@ const ProjectsAnimation = () => {
           "./images/backoffice.jpg",
           "./images/landing.jpg",
           "./images/chat.png",
+          "./images/budget-tracker.png",
         ].map((picture, i) => (
           <div
             key={i}
